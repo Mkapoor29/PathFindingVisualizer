@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <!--  -->
+  <nav class="navbar navbar-dark bg-info">
+    <div class="main-head container-fluid">
+      <h1 class="display-3 text-light "> Path Finding Visualizer</h1>
+    </div>
+  </nav>
+
+
+
+  <!-- grid for maze and controls -->
+  <div class="name">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="title mt-4 py-2 mx-4 text-center">
+            <h1>Breadth First Search</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Display-->
+  <div class="col-12  ">
+    <div class="container col-12 pb-4 ">
+      <div class="row my-4 " >
+
+        <!-- maze -->
+        <div class="col-lg-8 ">
+          <div class="board my-4 mx-auto d-flex">
+            <div class="screen bg-light m-auto ">
+              <!-- mazee -->
+            </div>
+          </div>
+        </div>
+
+        <!-- controls -->
+        <div class="col-lg-4 ">
+          <div class="control my-4 mx-auto p-4">
+            <h1 class="text-center mb-5"> Controls</h1>
+            <!--Choose Algorithm-->
+            <div class="col-auto my-2">
+              <div class="container">
+                <div class="row">
+                  <div class="col-9 my-auto">
+                    <select class="form-select" aria-label="Default select example" id="algorithm">
+                      <option selected value="1">BFS</option>
+                      <option value="2">Dijkstra</option>
+                      <option value="3">A*</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <button class="btn btn-dark" id="start">Visualize</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div class="col-auto my-4">
+              <label for="size" class="form-label">Dimension : <span id="size_dis"> 22 </span></label>
+              <input type="range" class="form-range dark" min="4" max="40" step="1" id="size">
+            </div>
+
+
+            <div class="container">
+              <div class="row">
+                <div class="col-6  text-center">
+                  <button class="btn btn-outline-dark" id="clear">Clear</button>
+                </div>
+                <div class="col-6  text-center">
+                  <button class="btn btn-dark" id="wall">Wall</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
